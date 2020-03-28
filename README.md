@@ -1,7 +1,7 @@
 # OGP Taglets
 
 These are the Javadoc taglets for course H01P1A, Objectgericht programmeren, at KU Leuven. In particular, they support `@pre`, `@post`, `@throws`, and `@invar` tags with formal parts,
-as well as the more specialized `@immutable`, `@representationObject`, `@representationObjects`, `@peerObject`, `@peerObjects`, `@basic`, `@inspects`, `@mutates`, `@mutates_properties`, and `@may_throw`
+as well as the more specialized `@immutable`, `@representationObject`, `@representationObjects`, `@peerObject`, `@peerObjects`, `@basic`, `@inspects`, `@mutates`, `@mutates_properties`, `@creates`, and `@may_throw`
 tags.
 
 For example, suppose you have the following class:
@@ -124,7 +124,7 @@ You can generate Javadoc for it by downloading the OGP Taglets .jar file from th
 3. On the second page, select referenced archive `jrt-fs.jar`. Then click Next.
 4. On the third page, enter the following extra Javadoc options:
     ```
-    -tagletpath /Users/YOUR_USERNAME/Downloads/ogptaglets-0.2.jar -taglet ogptaglets.ImmutableTaglet -taglet ogptaglets.InvariantsTaglet -taglet ogptaglets.RepresentationObjectTaglet -taglet ogptaglets.RepresentationObjectsTaglet -taglet ogptaglets.PeerObjectTaglet -taglet ogptaglets.PeerObjectsTaglet -taglet ogptaglets.BasicTaglet -taglet ogptaglets.PreconditionsTaglet -taglet ogptaglets.InspectsTaglet -taglet ogptaglets.MutatesTaglet -taglet ogptaglets.MutatesPropertiesTaglet -taglet ogptaglets.ThrowsTaglet -taglet ogptaglets.MayThrowTaglet -taglet ogptaglets.PostconditionsTaglet
+    -tagletpath /Users/YOUR_USERNAME/Downloads/ogptaglets-0.2.jar -taglet ogptaglets.ImmutableTaglet -taglet ogptaglets.InvariantsTaglet -taglet ogptaglets.RepresentationObjectTaglet -taglet ogptaglets.RepresentationObjectsTaglet -taglet ogptaglets.PeerObjectTaglet -taglet ogptaglets.PeerObjectsTaglet -taglet ogptaglets.BasicTaglet -taglet ogptaglets.PreconditionsTaglet -taglet ogptaglets.InspectsTaglet -taglet ogptaglets.MutatesTaglet -taglet ogptaglets.MutatesPropertiesTaglet -taglet ogptaglets.CreatesTaglet -taglet ogptaglets.ThrowsTaglet -taglet ogptaglets.MayThrowTaglet -taglet ogptaglets.PostconditionsTaglet
     ```
    Also, check the _Open generated index file in browser_ checkbox.
    Then, click Finish.

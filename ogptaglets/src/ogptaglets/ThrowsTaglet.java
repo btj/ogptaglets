@@ -50,6 +50,7 @@ public class ThrowsTaglet extends OGPTaglet {
 			if (commentTree == null) break fallback;
 			DocTreePath referencePath = DocTreePath.getPath(referringElementPath, commentTree, rt);
 			Element referencedElement = environment.getDocTrees().getElement(referencePath);
+			if (referencedElement == null) break fallback;
 			if (referencedElement.toString().startsWith("java."))
 				return "<a href='https://docs.oracle.com/en/java/javase/13/docs/api/java.base/" + referencedElement.toString().replace('.', '/') + ".html'>" + rt.toString() + "</a>";
 			else {

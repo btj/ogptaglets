@@ -2,7 +2,7 @@ package ogptaglets;
 
 import java.util.Set;
 
-public class PostconditionsTaglet extends OGPTaglet {
+public class PostconditionsTaglet extends FormalPartTaglet {
 
 	@Override
 	public Set<Location> getAllowedLocations() {

@@ -2,7 +2,7 @@ package ogptaglets;
 
 import java.util.Set;
 
-public class PreconditionsTaglet extends FormalPartTaglet {
+public class InspectsTaglet extends FormalPartTaglet {
 
 	@Override
 	public Set<Location> getAllowedLocations() {
@@ -11,12 +11,12 @@ public class PreconditionsTaglet extends FormalPartTaglet {
 
 	@Override
 	public String getName() {
-		return "pre";
+		return "inspects";
 	}
 
 	@Override
 	public String getTitle() {
-		return "Preconditions";
+		return "Inspects";
 	}
 
 }

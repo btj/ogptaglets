@@ -2,7 +2,7 @@ package ogptaglets;
 
 import java.util.Set;
 
-public class InvariantsTaglet extends OGPTaglet {
+public class InvariantsTaglet extends FormalPartTaglet {
 
 	@Override
 	public Set<Location> getAllowedLocations() {

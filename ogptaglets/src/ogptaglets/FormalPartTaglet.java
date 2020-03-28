@@ -5,11 +5,12 @@ import java.util.List;
 import javax.lang.model.element.Element;
 
 import com.sun.source.doctree.DocTree;
+import com.sun.source.doctree.LiteralTree;
 import com.sun.source.doctree.UnknownBlockTagTree;
 
 import jdk.javadoc.doclet.Taglet;
 
-public abstract class OGPTaglet implements Taglet {
+public abstract class FormalPartTaglet implements Taglet {
 
 	@Override
 	public boolean isInlineTag() {
@@ -22,10 +23,19 @@ public abstract class OGPTaglet implements Taglet {
 		return renderContent(contentTrees, "<pre style='padding: 16px; background: #f8f8f8'>", "</pre>");
 	}
 	
+	private static String literalSpanStart = String.valueOf((char)0xfffe);
+	private static String literalSpanEnd = String.valueOf((char)0xffff);
+	
 	public static String renderContent(List<? extends DocTree> contentTrees, String prolog, String epilog) {
 		StringBuilder contentBuilder = new StringBuilder();
 		for (DocTree child : contentTrees)
-			contentBuilder.append(child.toString());
+			if (child instanceof LiteralTree) {
+				// Horrible hack
+				contentBuilder.append(literalSpanStart);
+				contentBuilder.append(((LiteralTree)child).getBody().toString());
+				contentBuilder.append(literalSpanEnd);
+			} else
+				contentBuilder.append(child.toString());
 		String content = contentBuilder.toString();
 		int bar = content.indexOf('|');
 		String informalPart;
@@ -66,7 +76,8 @@ public abstract class OGPTaglet implements Taglet {
 			informalPart = content;
 			formalPart = null;
 		}
-		String result = informalPart.replace("&", "&amp;").replace("<", "&lt;");
+		String result = informalPart.replace("&", "&amp;").replace("<", "&lt;")
+				.replace(literalSpanStart, "<code>").replace(literalSpanEnd, "</code>");
 		if (formalPart != null)
 			result += prolog + formalPart.replace("&",  "&amp;").replace("<",  "&lt;") + epilog;
 		return result;

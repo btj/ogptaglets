@@ -16,7 +16,7 @@ import com.sun.source.util.TreePath;
 import jdk.javadoc.doclet.Doclet;
 import jdk.javadoc.doclet.DocletEnvironment;
 
-public class ThrowsTaglet extends OGPTaglet {
+public class ThrowsTaglet extends FormalPartTaglet {
 	
 	private DocletEnvironment environment;
 	

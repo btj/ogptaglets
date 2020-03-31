@@ -128,3 +128,17 @@ You can generate Javadoc for it by downloading the OGP Taglets .jar file from th
     ```
    Also, check the _Open generated index file in browser_ checkbox.
    Then, click Finish.
+
+## FAQ
+
+### Javadoc generates lots of errors and warnings
+
+Javadoc checks that all content of Javadoc comments is valid HTML. However, the formal parts of OGP tags are not necessarily valid HTML. Javadoc complains about this but it does not otherwise cause problems, so these errors can safely be ignored.
+
+In particular, the following errors can safely be ignored:
+- `Malformed HTML` errors on less-than (`<`) signs inside OGP tag formal parts
+- `Bad HTML entity` errors on ampersand (`&`) signs inside OGP tag formal parts
+
+Javadoc also warns about missing `@param` and `@return` tags. These warnings, too, can safely be ignored.
+
+If you get errors about unknown tags, however, make sure you spelled the tag name correctly and you are using the complete up-to-date set of extra Javadoc options specified above.

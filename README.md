@@ -122,10 +122,11 @@ You can generate Javadoc for it by downloading the OGP Taglets .jar file from th
 1. In Eclipse, in the Project menu, choose **Generate Javadoc...**.
 2. On the first page of the Generate Javadoc wizard, select the file containing the Interval class. Then click Next.
 3. On the second page, select referenced archive `jrt-fs.jar`. Then click Next.
-4. On the third page, enter the following extra Javadoc options (replace `/Users/YOUR_USERNAME/Downloads` by the location where you downloaded the OGP Taglets .jar file):
+4. On the third page, enter the following extra Javadoc options (replace `<download_folder>` by the location where you downloaded the OGP Taglets .jar file; depending on your operating system, this is `/Users/<username>/Downloads` on mac, `C:/Users/<username>/Downloads` on windows, `/home/<username>/Downloads` on linux):
     ```
-    -tagletpath /Users/YOUR_USERNAME/Downloads/ogptaglets-0.2.jar -taglet ogptaglets.ImmutableTaglet -taglet ogptaglets.InvariantsTaglet -taglet ogptaglets.RepresentationObjectTaglet -taglet ogptaglets.RepresentationObjectsTaglet -taglet ogptaglets.PeerObjectTaglet -taglet ogptaglets.PeerObjectsTaglet -taglet ogptaglets.BasicTaglet -taglet ogptaglets.PreconditionsTaglet -taglet ogptaglets.InspectsTaglet -taglet ogptaglets.MutatesTaglet -taglet ogptaglets.MutatesPropertiesTaglet -taglet ogptaglets.CreatesTaglet -taglet ogptaglets.ThrowsTaglet -taglet ogptaglets.MayThrowTaglet -taglet ogptaglets.PostconditionsTaglet
+    -tagletpath <download_folder>/ogptaglets-0.2.jar -taglet ogptaglets.ImmutableTaglet -taglet ogptaglets.InvariantsTaglet -taglet ogptaglets.RepresentationObjectTaglet -taglet ogptaglets.RepresentationObjectsTaglet -taglet ogptaglets.PeerObjectTaglet -taglet ogptaglets.PeerObjectsTaglet -taglet ogptaglets.BasicTaglet -taglet ogptaglets.PreconditionsTaglet -taglet ogptaglets.InspectsTaglet -taglet ogptaglets.MutatesTaglet -taglet ogptaglets.MutatesPropertiesTaglet -taglet ogptaglets.CreatesTaglet -taglet ogptaglets.ThrowsTaglet -taglet ogptaglets.MayThrowTaglet -taglet ogptaglets.PostconditionsTaglet
     ```
+   
    Also, check the _Open generated index file in browser_ checkbox.
    Then, click Finish.
 

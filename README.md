@@ -4,6 +4,8 @@ These are the Javadoc taglets for course H01P1A, Objectgericht programmeren, at 
 as well as the more specialized `@immutable`, `@representationObject`, `@representationObjects`, `@peerObject`, `@peerObjects`, `@basic`, `@inspects`, `@mutates`, `@mutates_properties`, `@creates`, and `@may_throw`
 tags.
 
+## Example Documentation
+
 For example, suppose you have the following class:
 
 ```java
@@ -116,6 +118,8 @@ public class Interval {
 
 }
 ```
+
+## Usage
 
 You can generate Javadoc for it by downloading the OGP Taglets .jar file from the [Releases](https://github.com/btj/ogptaglets/releases) page, and then:
 
